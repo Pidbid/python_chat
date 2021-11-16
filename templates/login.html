@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>聊天用户登录</title>
+		<link rel="stylesheet" href="static/css/login.css" />
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/js-cookie/latest/js.cookie.min.js"></script>
+	</head>
+
+	<body>
+		<div class="login">
+			<h2>用户登录</h2>
+			<div class="login_box">
+				<input name="username" type="text" required /><label>用户名</label>
+			</div>
+			<div class="login_box">
+				<input name="password" type="password" /><label>密码</label>
+			</div>
+			<a href="javascript:login()">
+				登录
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</body>
+	<script>
+		function login() {
+			let username = $("input[name='username']").val()
+			let password = $("input[name='password']").val()
+			$.ajax({
+				type:"GET",
+				url:"/api/login",
+				data:{"username":username,"password":password},
+				success:function(res){
+					if(res.code == 0){
+						console.log("login success")
+						Cookies.set("token",res.data)
+						window.localStorage.setItem("user",JSON.stringify(res.other))
+						window.location = "/"
+					}
+				}
+			})
+		}
+	</script>
+
+</html>

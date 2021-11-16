@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "username": "wicos",
+            "password": "123456",
+            "avatar":"static/image/user1.gif"
+        },
+        {
+            "username": "pidbid",
+            "password": "123456",
+            "avatar":"static/image/user2.gif"
+        }
+    ]
+}
