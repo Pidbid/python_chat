@@ -58,12 +58,14 @@ class SECURITY:
         else:
             return {"code":1,"data":"wrong username or password"}
 
-    def token_auth(self,token:str):
+    def token_auth(self,token:str=None):
         """
         验证token的函数
         Args:
             token ([str]): [传入的token]
         """
+        if token == None:
+            return {"code":1,"data":"token auth failed"}
         self.user_token = token
         try: 
             auth_result = jwt.decode(self.user_token,self.token_key,algorithms="HS256")
