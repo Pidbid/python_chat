@@ -1,6 +1,6 @@
 # python_chat  
 一个python实现的聊天框架   
-![main image](https://github.com/Pidbid/python_chat/static/image/main.jpg)
+![main image](https://github.com/Pidbid/python_chat/blob/master/static/image/main.jpg)
 
 最近自己所做的项目需要一个聊天的功能，但是目前可用的有网易的 IM 以及其他公司提供的功能都很好用，但是出于练手的目的，所以重新写了一个简单的聊天功能，相当于制作轮子？
 
@@ -19,7 +19,7 @@ Html+js+css
 Cookies 一个第三方 cookies 的 js 库，用法简单：如 Cookies.get (“token”)
 
 ## 实现思路  
-![status](https://github.com/Pidbid/python_chat/static/image/ddd.png)
+![status](https://github.com/Pidbid/python_chat/blob/master/static/image/ddd.png)
 后台采用 python 的 fastapi 作为框架（其实在整个实现的过程中什么作为网页框架并不重要），通信协议采用 websocket，由于主要实现的是聊天的功能，其他的并不重要，所以就简单的不使用数据库的情况下进行设计。ok，那我们开始吧～
 ### 数据预设
 
@@ -45,7 +45,7 @@ Cookies 一个第三方 cookies 的 js 库，用法简单：如 Cookies.get (“
 
  {"status":"chat","from":"wicos1","to":"wicos","data":"发送的其他信息"}
 ##  详细流程
-![流程](https://github.com/Pidbid/python_chat/static/image/ddd.png)  
+![流程](https://github.com/Pidbid/python_chat/blob/master/static/image/ddd.png)  
 ###  服务端流程  
 
 #### ws 服务端主流程
@@ -61,9 +61,9 @@ Cookies 一个第三方 cookies 的 js 库，用法简单：如 Cookies.get (“
 在用户登录后，使用 reconnect_websocket 的 js 库进行 ws 链接，发送登录信息，之后开始聊天流程
 
 ### 截图介绍
-![login page](https://github.com/Pidbid/python_chat/static/image/ccc.png)  
-![chat page 1](https://github.com/Pidbid/python_chat/static/image/aaa.png)  
-![chat page 2](https://github.com/Pidbid/python_chat/static/image/bbb.png)  
+![login page](https://github.com/Pidbid/python_chat/blob/master/static/image/ccc.png)  
+![chat page 1](https://github.com/Pidbid/python_chat/blob/master/static/image/aaa.png)  
+![chat page 2](https://github.com/Pidbid/python_chat/blob/master/static/image/bbb.png)  
 
 ## To do  
 - 未来要做的事还没想好
