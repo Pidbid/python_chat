@@ -45,7 +45,7 @@ Cookies 一个第三方 cookies 的 js 库，用法简单：如 Cookies.get (“
 
  {"status":"chat","from":"wicos1","to":"wicos","data":"发送的其他信息"}
 ##  详细流程
-![流程](https://github.com/Pidbid/python_chat/blob/master/static/image/ddd.png)  
+![流程](https://github.com/Pidbid/python_chat/blob/master/static/image/eee.png)  
 ###  服务端流程  
 
 #### ws 服务端主流程
